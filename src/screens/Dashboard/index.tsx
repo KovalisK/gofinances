@@ -67,7 +67,7 @@ export function Dashboard (){
         let entriesTotal = 0;
         let expensiveTotal = 0;
 
-        const transactionsFormated: DataListProps[] = transactions
+        const transactionsFormatted: DataListProps[] = transactions
         .map((item: DataListProps) => {
             if (item.type === 'positive') {
                 entriesTotal += Number(item.amount);
@@ -97,7 +97,7 @@ export function Dashboard (){
             }
         });
 
-        setTransactions(transactionsFormated);
+        setTransactions(transactionsFormatted);
 
         const lastTransactionEntries =  getLastTransactionDate(transactions, 'positive');
         const lastTransactionExpensives =  getLastTransactionDate(transactions, 'negative');
